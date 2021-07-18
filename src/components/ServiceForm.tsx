@@ -40,20 +40,20 @@ const ServiceForm = () => {
           {!error && message && <Message variant='success'>{message}</Message>} */}
       <Form onSubmit={submitHandler} className='service-form'>
         <Form.Group controlId='service-name'>
-          <Form.Label>Palvelun nimi</Form.Label>
+          <Form.Label>Service</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Palvelun nimi'
+            placeholder='Service name'
             name='name'
             value={formData.name}
             onChange={handleChange}
           ></Form.Control>
         </Form.Group>
         <Form.Group controlId='service-descriptionFirst'>
-          <Form.Label>Palvelun kuvaus vasen sarake</Form.Label>
+          <Form.Label>Description</Form.Label>
           <Form.Control as='textarea' rows={3}
             type='text'
-            placeholder='Palvelun kuvaus vasen sarake'
+            placeholder='Description'
             name='descriptionFirst'
             value={formData.description}
             onChange={handleChange}

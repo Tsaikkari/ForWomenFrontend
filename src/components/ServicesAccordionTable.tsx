@@ -23,7 +23,7 @@ const ServicesAccordionTable = () => {
             </Row>
             {/* <hr style={{ width: '30%', borderStyle: 'none', borderTop: 'solid white', borderWidth: '2px'}}></hr> */}
             <div className='arrow-icon'><i className="fas fa-arrow-alt-circle-down"></i></div>
-            <Row><Col md={12}><h5 className='vertaile my-3'>Vertaile ominaisuuksia klikkaamalla.</h5></Col></Row>
+            <Row><Col md={12}><h5 className='vertaile my-3'>Compare services</h5></Col></Row>
 
           </span>
         </Accordion.Toggle>

@@ -4,7 +4,7 @@ const Members = ({ member, index, role }: any) => {
       {role === 'member' && index === 2 && (
         <>
           <p className='role'>
-            <strong>Läheiset</strong>
+            <strong>Members</strong>
           </p>
           <li className='member'>{member}</li>
         </>
