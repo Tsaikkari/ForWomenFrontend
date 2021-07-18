@@ -65,6 +65,7 @@ const MemberForm = () => {
           username: formData.username,
           email: formData.email,
           firstName: formData.firstName,
+          lastName: '',
           mobile: formData.mobile,
           password: firstPassword,
           role: formData.role,

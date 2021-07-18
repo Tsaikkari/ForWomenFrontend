@@ -11,7 +11,7 @@ const CopyrightPPLink = () => {
         <Nav>
           <LinkContainer to='/copyright'>
             <Nav.Link className='copyright text-center'>
-              <span className="copyright-link">Copyright &copy; For Women {year}</span> | <span className="privacy-policy-link">Tietosuoja</span>
+              <span className="copyright-link">Copyright &copy; For Women {year}</span> | <span className="privacy-policy-link">Privacy Policy</span>
             </Nav.Link>
           </LinkContainer>
         </Nav>

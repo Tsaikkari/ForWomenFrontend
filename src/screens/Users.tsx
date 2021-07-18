@@ -35,7 +35,7 @@ const Users = () => {
 
   return (
     <>
-      <h1 className='my-3 ml-3' style={{ color: '#4e5180', fontFamily: 'Poppins, sanf-serif' }}>Asiakkaat</h1>
+      <h1 className='my-3 ml-3' style={{ color: '#4e5180', fontFamily: 'Poppins, sanf-serif' }}>Users</h1>
       {loading ? (
         <Loader />
       ) : error ? (

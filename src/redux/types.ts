@@ -56,17 +56,10 @@ export type Credential = {
 }
 
 // User
-export type User = {
+export type User = Customer & {
   id: number | null
-  username: string
   email: string
   password: string
-  firstName: string
-  lastName: string
-  mobile?: string
-  image?: string
-  role?: string
-  isAdmin: boolean
   group: Group
   orders?: any[]
   loading: boolean
@@ -130,10 +123,7 @@ export type RegisterCustomerFailAction = {
 export type LoginUserRequestAction = {
   type: typeof LOGIN_USER_REQUEST
   payload: {
-    credential: {
-      username: string
-      password: string
-    },
+    credential: Credential
     history: any
   }
 }
@@ -197,16 +187,9 @@ export type GetUserFailAction = {
 }
 
 // Update user
-export type UserUpdate = {
-  username: string
+export type UserUpdate = Customer & {
   email: string
   password?: string
-  firstName: string
-  lastName: string
-  mobile?: string
-  image?: string
-  role?: string
-  isAdmin: boolean
   error: any
   success: any
 }
@@ -261,17 +244,7 @@ export type CreateGroupFailAction = {
   }
 }
 
-export type GroupUpdate = {
-  id: any
-  username: string
-  email: string
-  password: string
-  firstName: string
-  lastName: string
-  mobile?: string
-  image?: string
-  role?: string
-  isAdmin: boolean
+export type GroupUpdate = User & {
   members: any[]
 }
 

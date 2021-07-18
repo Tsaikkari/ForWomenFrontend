@@ -37,6 +37,7 @@ const initState: UserState = {
 const user = (state = initState, action: UserActions): UserState => {
   switch (action.type) {
     case REGISTER_CUSTOMER_SUCCESS:
+      console.log('register-data', action.payload)
       return { ...state, ...action.payload }
     case LOGIN_USER_SUCCESS:
       return {

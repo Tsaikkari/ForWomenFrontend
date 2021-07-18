@@ -41,12 +41,7 @@ import {
 const groupId = (state: AppState) => state.user.group.id
 
 function* registerCustomerSaga(action: RegisterCustomerRequestAction) {
-  const username = action.payload.username
-  const email = action.payload.email
-  const password = action.payload.password
-  const firstName = action.payload.firstName
-  const lastName = action.payload.lastName
-  const role = action.payload.role
+  const { username, email, password, firstName, lastName, role } = action.payload
 
   try {
     //@ts-ignore
@@ -118,8 +113,8 @@ function* deleteUserSaga(action: DeleteUserRequestAction) {
     //@ts-ignore
     const res = yield axios.delete(`/user/${userId}`)
     if (res.status === 200) {
-    yield put(deleteUserSuccess())
-    } 
+      yield put(deleteUserSuccess())
+    }
   } catch (error) {
     yield put(deleteUserFail(error))
   }
@@ -152,7 +147,7 @@ function* updateGroupSaga(action: UpdateGroupRequestAction) {
 }
 
 // Send mail to a member
-function * sendEmailMemberSaga(action: SendEmailMemberRequestAction) {
+function* sendEmailMemberSaga(action: SendEmailMemberRequestAction) {
   const email = action.payload.email
   const name = action.payload.firstName
   try {
@@ -165,7 +160,7 @@ function * sendEmailMemberSaga(action: SendEmailMemberRequestAction) {
 }
 
 // Send mail to a customer
-function * sendEmailCustomerSaga(action: SendEmailCustomerRequestAction) {
+function* sendEmailCustomerSaga(action: SendEmailCustomerRequestAction) {
   const email = action.payload.email
   const name = action.payload.firstName
   try {
@@ -178,9 +173,8 @@ function * sendEmailCustomerSaga(action: SendEmailCustomerRequestAction) {
 }
 
 // Contact mail 
-function * sendContactMailSaga(action: SendContactMailRequestAction) {
+function* sendContactMailSaga(action: SendContactMailRequestAction) {
   const { email, name, text } = action.payload
-  console.log('actionpayloadcontactmailSaga', action.payload)
   try {
     //@ts-ignore
     const res = yield axios.post('/email/contact', { email, name, text })
