@@ -26,6 +26,7 @@ const PlaceOrder = () => {
       address: cart.address,
       postalCode: cart.postalCode,
       city: cart.city,
+      country: cart.country,
       paymentMethod: cart.paymentMethod,
       price: cart.price,
       shippingPrice: cart.shippingPrice,

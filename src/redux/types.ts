@@ -52,16 +52,16 @@ export const SEND_CONTACT_MAIL_FAIL = 'SEND_CONTACT_MAIL_FAIL'
 // Credential 
 export type Credential = {
   username: string
+  email: string
   password: string
 }
 
 // User
-export type User = Customer & {
+export type User = Customer & Credential & {
   id: number | null
   email: string
-  password: string
   group: Group
-  orders?: any[]
+  orders?: Order[]
   loading: boolean
   error: any
 }
@@ -71,7 +71,7 @@ export type UserState = User & {
 }
 
 export type Users = {
-  list: any[]
+  list: User[]
   loading: boolean
   error: any
 }
@@ -90,26 +90,12 @@ export type Customer = {
 // Register customer
 export type RegisterCustomerRequestAction = {
   type: typeof REGISTER_CUSTOMER_REQUEST
-  payload: {
-    username: string
-    email: string
-    password: string
-    firstName: string
-    lastName: string
-    role: string
-  }
+  payload: Customer & Credential
 }
 
 export type RegisterCustomerSuccessAction = {
   type: typeof REGISTER_CUSTOMER_SUCCESS
-  payload: {
-    username: string
-    email: string
-    password: string
-    firstName: string
-    lastName: string
-    role: string
-  }
+  payload: Customer & Credential
 }
 
 export type RegisterCustomerFailAction = {
@@ -187,9 +173,7 @@ export type GetUserFailAction = {
 }
 
 // Update user
-export type UserUpdate = Customer & {
-  email: string
-  password?: string
+export type UserUpdate = Customer & Credential & {
   error: any
   success: any
 }
@@ -468,6 +452,7 @@ export type Order = {
   address: string
   postalCode: string
   city: string
+  country: string
   paymentMethod: any
   taxPrice: number
   totalPrice: number
@@ -511,17 +496,7 @@ export type CredentialState = {
   credential: Credential
 }
 
-export type Member = {
-  role: string
-  username: string
-  email: string
-  password: string
-  firstName: string
-  lastName: string
-  mobile?: string
-  image?: string
-  isAdmin?: boolean
-}
+export type Member = User
 
 export type Group = {
   id: number | null
@@ -536,17 +511,8 @@ export type GroupState = {
   success: boolean
 }
 
-export type CartState = {
+export type CartState = Order & {
   inCart: any[]
-  address: string
-  postalCode: string
-  city: string
-  country: string
-  paymentMethod: any
-  price: number
-  shippingPrice: number
-  taxPrice: number
-  totalPrice: number
 }
 
 export type ServicesState = {
