@@ -1,0 +1,975 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.form-container {
+  background: white;
+  margin-top: 1rem;
+  min-height: 98vh;
+}
+
+.form-row > .col {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*--------------------HOMEPAGE 1224PX ---> ---------------------------*/
+
+.read-more-link {
+  font-family: 'Poppins', sans-serif;
+  color: #4e5180 !important;
+  font-size: 1.2rem;
+}
+
+/*----------------------ABOUT PAGE 1224PX ---> --------------------------------- */
+
+.dots {
+  border-style: none;
+  border-top: dotted #a6b1e1;
+  border-width: 5px;
+  margin-top: 5.5rem;
+  width: 5%;
+}
+
+/*----------------------------TABLE 1224PX ---> --------------------------------*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: #644f7f;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+.img-fluid.container {
+  width: 100vw !important;
+  height: 70vh;
+  background-size: cover !important;
+  background-position: top center !important;
+  margin: 0;
+}
+
+/*----------------------SERVICES PAGE 1224PX ---> ----------------------------------*/
+
+
+
+/*------------------------CONTACT PAGE 1224PX ---> ----------------------------------------*/
+
+/* contact form */
+.form-container,
+.contact-container {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-form {
+  margin-top: 0.8rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form-column {
+  margin-top: 0rem;
+  padding: 1rem 0;
+  border-bottom-right-radius: 10px;
+}
+
+input#contact-name,
+input#contact-email {
+  border: solid 1px rgb(214, 212, 212) !important;
+}
+
+.textarea {
+  resize: none;
+  background: transparent;
+  border: solid 2px rgb(211, 208, 208) !important;
+}
+
+/*----------------------LOGIN PAGE 1224PX ---> ------------------------------*/
+.signin {
+  color: #092a35;
+  color: #4e5180;
+  padding-top: 1rem;
+  padding-bottom: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.login-form {
+  margin-top: 6.5rem;
+  background-color: rgb(253, 249, 249);
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+}
+
+/* submit-buttons*/
+.save {
+  background-color: #4e5180 !important;
+  color: #fff !important;
+  margin-bottom: 1.9rem;
+  margin-top: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}
+
+.forgot-password {
+  color: #4e5180;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*---------------------FOOTER 1224PX ---> -------------------------------*/
+
+.footer-row,
+.footer,
+.privacy-policy,
+.text-center.col-md-6.col-12.links,
+.copyright {
+  padding-bottom: 0.5rem;
+  margin: 0;
+  background: #e7eaf6;
+}
+
+.privacy-policy,
+.copyright,
+.page-links {
+  color: rgb(51, 49, 49);
+  font-size: 0.9rem;
+  padding-bottom: 0;
+  padding-top: 0.6rem;
+  margin-bottom: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.copyright {
+  margin: auto;
+}
+
+.copyright-link {
+  padding-right: 1.4rem;
+}
+
+.privacy-policy-link {
+  padding-left: 1.4rem;
+}
+
+.copyright-mobile.nav-link {
+  display: none;
+}
+
+/*--------------------REGISTER PAGE 1224 ---------------*/
+
+/*steps */
+.circles-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.icon-in-circle {
+  font-size: 2rem;
+  padding: 1.4rem;
+  color: rgb(184, 180, 180);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-in-circle.active {
+  color: #4e5180;
+  color: #fff;
+}
+
+.steps-name {
+  color: #4e5180;
+  font-size: 0.64rem;
+  line-height: 0;
+}
+
+/* circles and texts under them*/
+li.step {
+  width: 5em;
+  height: 5em;
+  text-align: center;
+  line-height: 1.4em;
+  border-radius: 50%;
+  border: rgb(206, 199, 199) solid 1px;
+  margin: 0 4.5% 0 4.5%;
+  display: inline-block;
+  color: grey;
+  position: relative;
+}
+
+/* lines */
+li::before {
+  content: '';
+  position: absolute;
+  top: 2.5em;
+  left: -8.99em;
+  right: 8.99em;
+  width: 8.99em;
+  height: 0.1em;
+  border: dashed 1px rgb(219, 216, 216);
+  z-index: -1;
+}
+
+li:first-child::before {
+  display: none;
+}
+
+.step.active {
+  background: #f0f1f3;
+  background: #4e5180;
+  border: solid 1px #4e5180;
+}
+
+.step.active::before {
+  background: #a0a0a5;
+  border: solid 2px #a0a0a5;
+  height: 0.2em;
+}
+
+.alert-success {
+  background: #fff !important;
+  font-weight: 600;
+  color: #4e5180;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.register {
+  padding: 0;
+}
+
+.register-header {
+  color: #4e5180;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.register-form {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  padding: 1.5rem;
+  background: #e9ebed;
+  font-family: 'Poppins', sans-serif;
+}
+
+.password-length {
+  color: rgb(77, 74, 74);
+}
+
+.conditions {
+  color: #4e5180;
+  font-family: 'Poppins', sans-serif;
+}
+
+.register-button {
+  margin-top: 1.3rem;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}
+
+/*--------------------SHIPPING PAGE 1224 ---------------*/
+
+.shipping-header,
+.shipping-form {
+  font-family: 'Poppins', sans-serif;
+}
+
+.shipping-header {
+  color: #4e5180;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  font-weight: 600;
+}
+
+/*--------------------SHOPPINGCART 1224 ---------------*/
+
+.shopping-header,
+.shoppingcart-container {
+  font-family: 'Poppins', sans-serif;
+}
+
+.shoppingcart-header {
+  color: #4e5180;
+  margin-bottom: 1.4rem;
+  margin-top: 4rem;
+  margin-left: 0.9rem;
+  font-weight: 600;
+}
+
+.shoppingcart-back-button,
+.btn-block {
+  font-size: 1.3rem;
+}
+
+.shoppingcart-back-button {
+  margin-left: 0.9rem;
+  background: #fff !important;
+  color: #4e5180;
+  border: 1px solid #4e5180;
+  width: 16.6rem;
+}
+
+.shoppingcart-back-button:hover {
+  background: #4e5180 !important;
+  color: #fff;
+  border: none;
+}
+
+.shoppingcart-service-trash-button {
+  background: #fff;
+  color: grey;
+  border: none;
+  margin-top: 0.2rem;
+}
+
+/*--------------------PAYMENTMETHOD 1224 ---------------*/
+
+.paymentmethod-header {
+  color: #4e5180;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin: 2rem 0;
+}
+
+.paymentmethod-col {
+  font-family: 'Poppins', sans-serif;
+}
+
+.radio-button {
+  margin: 0.6rem 0;
+}
+
+.form-check-input {
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: -1.25rem;
+}
+
+.paymentmethod-back-button {
+  min-width: 6.4rem;
+  background: #fff !important;
+  color: #4e5180 !important;
+  border: 1px solid #4e5180;
+}
+
+/*--------------------PLACE ORDER PAGE 1224 ---------------*/
+
+.placeorder-header {
+  color: #4e5180;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin: 1rem 0 0 0;
+}
+
+.placeorder-headers {
+  color: #2c3635;
+}
+
+.order-info-col {
+  font-family: 'Poppins', sans-serif;
+  padding-left: 3.2rem;
+}
+
+.order-summary-col {
+  margin-top: 11.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.placeorder-texts {
+  font-size: 1.2rem;
+  letter-spacing: 0.03rem;
+}
+
+.selected-item {
+  margin-left: -1rem;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+.selected-product {
+  color: #4e5180;
+  font-weight: 700;
+}
+
+.placeorder-back-button {
+  background: #fff !important;
+  color: #4e5180;
+  border: 1px solid #4e5180;
+  font-size: 1.3rem;
+}
+
+.placeorder-back-button:hover {
+  background: #4e5180 !important;
+  color: #fff;
+  border: none;
+}
+
+/*///////////////////////////////////////////////////////////
+------------------------USER PROFILE PAGE 1224PX ---> ------------------
+///////////////////////////////////////////////////////////*/
+
+/* Subnavbar */
+.subnavbar.userpage-nav {
+  background: #fff !important;
+  border-top: rgb(219, 215, 215) solid 1px !important;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 9.4vh;
+}
+
+.variation-col,
+.order-col {
+  padding: 0;
+}
+
+.group {
+  padding-right: 0rem;
+  padding-left: 11rem;
+}
+
+.welcome-greeting {
+  padding: 1.5rem 0;
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.instruction,
+.introduction {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  padding-right: 3rem;
+  justify-content: space-evenly;
+}
+
+.instructions {
+  font-size: 1.2rem;
+  color: #40514e;
+  letter-spacing: 0.02rem;
+  line-height: 2;
+}
+
+.introduction-header {
+  margin-top: 1.2rem;
+  margin-bottom: 1.15rem;
+  color: #4e5180;
+  font-weight: 600;
+}
+
+.customer-info {
+  color: black;
+}
+
+.added-members {
+  padding: 1.6rem 0 1rem 0.3rem;
+  font-family: 'Poppins', sans-serif;
+  color: #4e5180;
+  font-size: 1.6rem;
+}
+
+.members-list {
+  /* padding: 0 1rem 2rem 1rem; */
+  padding-left: 1rem;
+  color: #40514e;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  /* display: inline-block; */
+}
+
+.membership {
+  list-style-type: none;
+}
+
+.role {
+  margin-bottom: 0;
+}
+
+.members {
+  list-style-type: none;
+}
+
+.order-header {
+  padding: 1.5rem 0;
+  margin-left: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+  color: #4e5180;
+  font-size: 1.6rem;
+}
+
+/*-----------------------USER FORM 1224PX ---> -------------------------------*/
+
+/* message text in box */
+.alert-success {
+  background-color: #e7eaf6;
+  border: none;
+  color: rgb(39, 38, 38);
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  min-width: 32vw;
+}
+
+.user-form {
+  padding-top: 1.5rem;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  min-width: 32vw;
+}
+
+.user-form-button {
+  margin-bottom: 2rem;
+  border: none;
+}
+
+.for-example {
+  background-color: #fff !important;
+  color: rgb(80, 78, 78);
+}
+
+.accordion-button {
+  background: white;
+  border: none;
+  text-align: left;
+  padding-top: 0;
+  padding-left: 0;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  text-decoration: none;
+}
+
+/* --------------------------MEMBER FORM ----------------------*/
+
+.member-form-header,
+.user-form-header {
+  padding-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #4e5180;
+}
+
+.member-button {
+  width: 13rem;
+}
+
+.send-member-email-button {
+  margin-left: 2.2rem;
+}
+
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+%%%%%%%%%%%%%%%%%      M O B I L E  --> 633 %%%%%%%%%%%%%%%%%
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+@media screen and (max-width: 633px) {
+  body {
+    overflow-x: hidden !important;
+    margin: 0 auto;
+  }
+
+  .logo {
+    color: #4e5180;
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* --------------------HOMEPAGE-----------*/
+
+
+  /*------------------ABOUT PAGE---------------------*/
+
+  .dots {
+    display: none;
+  }
+
+  /* ------------------SERVICES PAGE -------------------------*/
+
+
+  /*-----------------------CONTACT PAGE ---------------------*/
+
+  .contact-form {
+    width: 60vw;
+    margin: 20rem auto 4rem auto;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .label-name {
+    margin-top: 2.2rem;
+  }
+
+  .contact-button {
+    margin-bottom: 4rem;
+    background-color: #4e5180 !important;
+    border: none;
+    color: #fff !important;
+  }
+
+  /*------------------------LOGIN PAGE  -------------------------*/
+
+  .login-form {
+    margin: 25rem auto;
+    background: #fff;
+    padding: 1.2rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .signin {
+    color: #4e5180;
+    padding-top: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding-bottom: 0.7rem;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .forgot-password {
+    color: #4e5180;
+    padding-left: 0.26rem;
+    font-size: 1rem;
+    padding-top: 0 !important;
+    padding-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .login-button {
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+    background-color: #4e5180 !important;
+    border: none;
+    color: #fff !important;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /*----------------------FOOTER  ----------------------*/
+
+  .page-links {
+    display: none;
+  }
+
+  .footer-row,
+  .privacy-policy,
+  .text-center.col-md-6.col-12.links,
+  .copyright {
+    padding-top: 1rem;
+    margin: 0;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: -1px;
+    right: 2rem;
+    width: 100%;
+    height: 3rem;
+  }
+
+  .privacy-policy,
+  .copyright {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.7rem;
+    background: #fff;
+    width: 100%;
+  }
+  .copyright-mobile.nav-link {
+    color: rgb(122, 120, 120);
+  }
+
+  /*--------------------REGISTER PAGE  --------------------*/
+
+  .register {
+    padding: 0;
+  }
+  .register-header {
+    padding-top: 1.9rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    color: #4e5180;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .register-form {
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 1.5rem;
+    background: #e9ebed;
+    border-radius: 0 !important;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto 2rem auto;
+  }
+  .password-length {
+    color: rgb(77, 74, 74);
+  }
+  .conditions {
+    color: #4e5180;
+    font-family: 'Poppins', sans-serif;
+  }
+  .register-button {
+    margin-top: 1.3rem;
+    background-color: #4e5180 !important;
+    margin-bottom: 2rem;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /*///////////////////////////////////////////////////////////
+  ------------------USER PROFILE PAGE  ----------
+  ///////////////////////////////////////////////////////////*/
+
+  .user-page {
+    overflow-x: hidden;
+  }
+  .welcome-greeting {
+    color: #35413e;
+    margin: 0 1rem;
+  }
+  .userpage-nav {
+    background: #e7eaf6;
+  }
+
+  .added-members {
+    padding: 1rem 0 0 1.5rem;
+    color: #4e5180;
+  }
+  .members-list {
+    /* padding: 0 1rem 2rem 1rem; */
+    padding-left: 1.5rem;
+    color: #40514e;
+    font-family: 'Poppins', sans-serif;
+    /* display: inline-block; */
+  }
+  .group {
+    padding-bottom: 3rem;
+  }
+  .membership {
+    list-style-type: none;
+  }
+  .role {
+    margin-bottom: 0;
+  }
+  .alert-success {
+    background-color: #e7eaf6;
+    border: none;
+    color: rgb(37, 36, 36);
+    min-width: 40vw;
+    margin-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .user-form {
+    min-width: 40vw;
+    padding-left: 0;
+    padding-top: 1rem;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+  }
+  .user-form-button,
+  .member-button {
+    margin-bottom: 4rem;
+    background-color: #4e5180 !important;
+    border: none;
+    color: #fff !important;
+  }
+}
+  
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&& smaller &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    overflow-x: hidden !important;
+    margin: 0 auto;
+  }
+
+  .logo {
+    color: #4e5180;
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navbar-nav,
+  .mr-auto {
+    flex: 1;
+    margin: auto !important;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgb(78, 55, 55) !important;
+  }
+
+  /* submit-buttons*/
+  .save {
+    background-color: #4e5180 !important;
+    border: none;
+    color: #fff !important;
+    margin-bottom: 1.9rem;
+  }
+
+  /* -------------------HOMEPAGE 320-480 ---------------------------------------*/
+
+
+  /*------------------ABOUT PAGE 320-480 ---------------------*/
+
+
+  /* ------------------SERVICES PAGE 320-480 -------------------------*/
+
+
+  /*-----------------------CONTACT PAGE 320-480 ---------------------*/
+
+  .label-name {
+    margin-top: 2.2rem;
+  }
+
+  .contact-button {
+    margin-bottom: 3rem;
+    border: none;
+  }
+
+  /*------------------------LOGIN PAGE 320-480 -------------------------*/
+
+  .login-form {
+    margin-top: 14rem;
+    background: #fff;
+    padding: 0.3rem 1.5rem;
+  }
+
+  .form-label {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .signin {
+    color: #4e5180;
+    padding-top: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding-bottom: 0.7rem;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .forgot-password {
+    color: #4e5180;
+    padding-left: 1.31%;
+    font-size: 1rem;
+    padding-top: 0 !important;
+    padding-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .login-button {
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+  }
+
+  /*--------------------FOOTER 320-480 ---------------------------*/
+  .page-links {
+    display: none;
+  }
+
+  .footer-row,
+  .privacy-policy,
+  .text-center.col-md-6.col-12.links,
+  .copyright {
+    padding-top: 0.5rem;
+    margin: 0;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: -1px;
+    right: 2rem;
+    width: 100%;
+  }
+
+  .privacy-policy,
+  .copyright {
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.7rem;
+    background: #fff;
+    width: 100%;
+  }
+  .copyright-mobile.nav-link {
+    color: rgb(122, 120, 120);
+  }
+
+  /*-----------------REGISTER PAGE 320 - 480 -------------------------------*/
+
+  .register-header {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    color: #4e5180;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+  .conditions {
+    color: #4e5180;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .register-button {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+  }
+
+  /*------------------USERPAGE 320-480 ---------------------------------*/
+
+  .invisible {
+    visibility: hidden;
+  }
+
+  .send-member-email-col {
+    display: flex;
+    justify-content: center;
+  }
+
+  .send-member-email-button {
+    margin-left: 0;
+  }
+
+  .member-button,
+  .send-member-email-button {
+    width: 100%;
+  }
+}
+
