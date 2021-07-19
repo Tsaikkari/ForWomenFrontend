@@ -22,7 +22,7 @@ const Services = () => {
   return (
     <>
       <Container fluid className='my-1 products-container'>
-        <h5 className='header-under-pic order-service pb-2'>Order Service</h5>
+        <h5 className='header-under-pic order-service pb-2'>Services</h5>
         {loading ? (
           <Loader />
         ) : error ? (

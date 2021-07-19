@@ -49,7 +49,6 @@ const Users = () => {
               <th className='text-center'>ROLE</th>
               <th className='text-center'>FIRSTNAME</th>
               <th className='text-center'>LASTNAME</th>
-              <th className='text-center'>USERNAME</th>
               <th className='text-center'>MOBILE</th>
               <th className='text-center'>EMAIL</th>
               <th className='text-center'>ADMIN</th>
@@ -65,7 +64,7 @@ const Users = () => {
                 <td>{user.role}</td>
                 <td>{user.firstName}</td>
                 <td>{user.lastName}</td>
-                <td>{user.username}</td>
+                <td>{user.email}</td>
                 <td>{user.mobile}</td>
                 <td>
                   <a href={`receiver:${user.email}`}>{user.email}</a>

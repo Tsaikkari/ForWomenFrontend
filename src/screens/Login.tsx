@@ -8,7 +8,7 @@ import { loginUserRequest } from '../redux/actions/user'
 import { AppState } from '../redux/types'
 
 const Login = () => {
-  const [username, setUserName] = useState('')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const dispatch = useDispatch()
@@ -21,8 +21,8 @@ const Login = () => {
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault()
 
-    dispatch(loginUserRequest(username, password, history))
-    setUserName('')
+    dispatch(loginUserRequest(email, password, history))
+    setEmail('')
     setPassword('')
   }
 
@@ -35,8 +35,8 @@ const Login = () => {
           <LoginForm
             submitHandler={submitHandler}
             error={error}
-            username={username}
-            setUserName={setUserName}
+            email={email}
+            setEmail={setEmail}
             password={password}
             setPassword={setPassword}
             loading={loading}
@@ -47,8 +47,8 @@ const Login = () => {
         <LoginForm
           submitHandler={submitHandler}
           error={error}
-          username={username}
-          setUserName={setUserName}
+          email={email}
+          setEmail={setEmail}
           password={password}
           setPassword={setPassword}
           loading={loading}

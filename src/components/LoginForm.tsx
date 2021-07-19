@@ -5,8 +5,8 @@ import Message from './Message'
 import Loader from './Loader'
 
 const LoginForm = ({
-  username,
-  setUserName,
+  email, 
+  setEmail,
   password,
   setPassword,
   error,
@@ -22,13 +22,13 @@ const LoginForm = ({
             {loading && <Loader />}
             <Form onSubmit={submitHandler} className='login-form'>
               <h1 className='signin'>Login</h1>
-              <Form.Group controlId='login-username'>
-                <Form.Label className='label'>Username</Form.Label>
+              <Form.Group controlId='login-email'>
+                <Form.Label className='label'>Email</Form.Label>
                 <Form.Control
                   type='text'
-                  placeholder='Username/Email'
-                  value={username}
-                  onChange={(e) => setUserName(e.target.value)}
+                  placeholder='Email'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 ></Form.Control>
               </Form.Group>
               <Form.Group controlId='login-password'>

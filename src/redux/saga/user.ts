@@ -41,12 +41,11 @@ import {
 const groupId = (state: AppState) => state.user.group.id
 
 function* registerCustomerSaga(action: RegisterCustomerRequestAction) {
-  const { username, email, password, firstName, lastName, role } = action.payload
+  const { email, password, firstName, lastName, role } = action.payload
 
   try {
     //@ts-ignore
     const res = yield axios.post('/user/root', {
-      username,
       email,
       password,
       firstName,
@@ -60,14 +59,14 @@ function* registerCustomerSaga(action: RegisterCustomerRequestAction) {
 }
 
 function* loginUserSaga(action: LoginUserRequestAction) {
-  const username = action.payload.credential.username
+  const email = action.payload.credential.email
   const password = action.payload.credential.password
   const history = action.payload.history
 
   try {
     //@ts-ignore
     const res = yield axios.post('/login', {
-      username,
+      email,
       password,
     })
 

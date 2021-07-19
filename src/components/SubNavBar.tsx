@@ -12,7 +12,7 @@ const SubNavBar = () => {
     <Navbar expand='lg' collapseOnSelect className='subnavbar userpage-nav'>
       {!isPaid ? (
         <LinkContainer to='/user'>
-          <Nav.Link className='mr-auto account-link'>My Account</Nav.Link>
+          <Nav.Link className='mr-auto account-link'>My account</Nav.Link>
         </LinkContainer>
       ) : (
         <nav className='justify-content-left'>
@@ -29,7 +29,7 @@ const SubNavBar = () => {
             <Nav.Link className='mr-auto sub-link'>Fitness</Nav.Link>
           </LinkContainer>
           <LinkContainer to='/user'>
-            <Nav.Link className='mr-auto account-link'>My Account</Nav.Link>
+            <Nav.Link className='mr-auto account-link'>My account</Nav.Link>
           </LinkContainer>
         </nav>
       )}

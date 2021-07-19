@@ -15,7 +15,6 @@ const UserForm = () => {
   const { error, loading, firstName, isLoggedIn } = user
   const [message, setMessage] = useState('')
   const [formData, setFormData] = useState({
-    username: '',
     firstName: '',
     lastName: '',
     mobile: '',
@@ -41,7 +40,6 @@ const UserForm = () => {
         setFormData((prevValue: any) => {
           return {
             ...prevValue,
-            username: user.username,
             firstName: user.firstName,
             lastName: user.lastName,
             email: user.email,
@@ -79,7 +77,6 @@ const UserForm = () => {
     if (user.password || formData.password === formData.confirmPassword) {
       dispatch(
         updateUserRequest({
-          username: formData.username,
           firstName: formData.firstName,
           lastName: formData.lastName,
           mobile: formData.mobile,
@@ -95,24 +92,13 @@ const UserForm = () => {
   return (
     <FormContainer>
       {loading && <Loader />}
-      <h1 className='user-form-header'>Contact Information</h1>
+      <h1 className='user-form-header'>My Contact Details</h1>
       <Form onSubmit={submitHandler} className='user-form'>
-        <Form.Group controlId='username-customer'>
+        <Form.Group controlId='customer-email'>
           <Form.Label>*Email</Form.Label>
           <Form.Control
-            type='text'
-            placeholder='Email'
-            name='username'
-            value={formData.username}
-            onChange={handleChange}
-          ></Form.Control>
-        </Form.Group>
-
-        <Form.Group controlId='customer-email'>
-          <Form.Label>*Repeat Email</Form.Label>
-          <Form.Control
             type='email'
-            placeholder='Repeat Email'
+            placeholder='Email'
             name='email'
             value={formData.email}
             onChange={handleChange}

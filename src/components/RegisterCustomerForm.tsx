@@ -8,7 +8,6 @@ import { registerCustomerRequest } from '../redux/actions/user'
 import { AppState } from '../redux/types'
 
 const RegisterCustomerForm = () => {
-  const [username, setUserName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -31,7 +30,6 @@ const RegisterCustomerForm = () => {
       setRole(role)
       dispatch(
         registerCustomerRequest(
-          username,
           email,
           password,
           firstName,
@@ -42,7 +40,6 @@ const RegisterCustomerForm = () => {
       history.push('/login')
     }
 
-    setUserName('')
     setEmail('')
     setPassword('')
     setConfirmPassword('')
@@ -60,22 +57,12 @@ const RegisterCustomerForm = () => {
       {!error && message && <Message className='message' variant='success'>{message}</Message>}
       <Form onSubmit={submitHandler} className='register-form'>
         <h1 className='register-header mb-4 text-center'>Sign Up</h1>
-        <Form.Group controlId='username-register'>
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            type='text'
-            name='email'
-            placeholder='Email'
-            value={username}
-            onChange={(e) => setUserName(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
         <Form.Group controlId='email-register'>
-          <Form.Label>Repeat Email</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control
             name='email'
             type='email'
-            placeholder='Repeat Email'
+            placeholder='Email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>

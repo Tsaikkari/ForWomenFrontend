@@ -11,7 +11,6 @@ export const initState: AppState = {
     loading: false,
     error: null,
     role: '',
-    username: '',
     email: '',
     password: '',
     firstName: '',

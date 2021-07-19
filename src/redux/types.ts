@@ -51,7 +51,6 @@ export const SEND_CONTACT_MAIL_FAIL = 'SEND_CONTACT_MAIL_FAIL'
 // TODO: clean up
 // Credential 
 export type Credential = {
-  username: string
   email: string
   password: string
 }
@@ -78,7 +77,6 @@ export type Users = {
 
 // Customer
 export type Customer = {
-  username: string
   firstName: string
   lastName: string
   mobile?: string

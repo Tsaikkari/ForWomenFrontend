@@ -21,7 +21,6 @@ const MemberForm = () => {
   const [message, setMessage] = useState('')
   const [firstPassword, setFirstPassword] = useState('')
   const [formData, setFormData] = useState({
-    username: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -62,7 +61,6 @@ const MemberForm = () => {
     ) {
       dispatch(
         updateGroupRequest({
-          username: formData.username,
           email: formData.email,
           firstName: formData.firstName,
           lastName: '',
@@ -94,7 +92,6 @@ const MemberForm = () => {
       if (formData.password === formData.confirmPassword) {
         dispatch(
           updateUserRequest({
-            username: formData.username,
             firstName: formData.firstName,
             mobile: formData.mobile,
             email: formData.email,
@@ -110,7 +107,6 @@ const MemberForm = () => {
     if (members && members.length <= 7) {
       dispatch(sendEmailMemberRequest(formData.email, formData.firstName))
       setFormData({
-        username: '',
         email: '',
         firstName: '',
         mobile: '',
@@ -130,20 +126,10 @@ const MemberForm = () => {
       {error && <Message variant='danger'>{error.message}</Message>}
       {!error && message && <Message variant='success'>{message}</Message>}
       {loading && <Loader />}
-      <h1 className='member-form-header'>Member Contact Info</h1>
+      <h1 className='member-form-header'>Member Contact Details</h1>
       <Form onSubmit={submitHandler} className='user-form'>
-        <Form.Group controlId='member-username'>
-          <Form.Label>*Email</Form.Label>
-          <Form.Control
-            type='text'
-            placeholder='Email'
-            name='username'
-            value={formData.username}
-            onChange={handleChange}
-          ></Form.Control>
-        </Form.Group>
         <Form.Group controlId='member-email'>
-          <Form.Label>*Repeat Email</Form.Label>
+          <Form.Label>*Email</Form.Label>
           <Form.Control
             type='text'
             placeholder='Repeat Email'
@@ -192,9 +178,8 @@ const MemberForm = () => {
         {user.role === 'member' && (
           <>
             <Form.Group controlId='member-mobile'>
-              <Form.Label>*Mobile phone</Form.Label>
+              <Form.Label>Mobile phone</Form.Label>
               <Form.Control
-                required
                 className='text-field'
                 type='text'
                 name='mobileNumber'
@@ -233,8 +218,9 @@ const MemberForm = () => {
               className='save send-customer-email-button'
               onClick={emailAndToOrderInfo}
             >
-              I have added all members
+              I have now added all members
             </Button>
+            <small>! You can add more members later (max total 5)</small>
           </>
         )}
       </Form>

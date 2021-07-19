@@ -42,7 +42,6 @@ import {
 } from '../types'
 
 export const registerCustomerRequest = (
-  username: string,
   email: string, 
   password: string,
   firstName: string,
@@ -51,7 +50,7 @@ export const registerCustomerRequest = (
 ) => {
   return {
     type: REGISTER_CUSTOMER_REQUEST,
-    payload: { username, email, password, firstName, lastName, role },
+    payload: { email, password, firstName, lastName, role },
   }
 }
 
@@ -73,12 +72,12 @@ export const registerCustomerFail = (error: any) => {
   }
 }
 
-export const loginUserRequest = (username: string, password: string, history: any) => {
+export const loginUserRequest = (email: string, password: string, history: any) => {
   return {
     type: LOGIN_USER_REQUEST,
     payload: {
       credential: {
-        username,
+        email,
         password,
       },
       history,

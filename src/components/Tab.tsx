@@ -16,10 +16,10 @@ const Tab = ({ userForm, memberForm, orders }: any) => {
           activeKey={key}
           onSelect={(k: any) => setKey(k)}
         >
-          <Tab eventKey='orders' title='Orders'>
+          <Tab eventKey='orders' title='My orders'>
             {orders}
           </Tab>
-          <Tab eventKey='customer' title='1 My contact info'>
+          <Tab eventKey='customer' title='1 My contact details'>
             {userForm}
           </Tab>
           <Tab eventKey='member' title='2 Add members'>
