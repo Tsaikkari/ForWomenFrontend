@@ -7,8 +7,7 @@ import { AppState } from '../redux/types'
 const SubNavBar = () => {
   const orders = useSelector((state: AppState) => state.user.orders)
   const isPaid = orders?.map((o: any) => o.isPaid)
-  // isPaid default = false
-
+  // TODO: change to flowers-svg + animation
   return (
     <Navbar expand='lg' collapseOnSelect className='subnavbar userpage-nav'>
       {!isPaid ? (

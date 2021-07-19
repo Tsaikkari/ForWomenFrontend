@@ -39,7 +39,7 @@ const NavBar = () => {
             <Nav.Link>Contact</Nav.Link>
           </LinkContainer>
           {user.isLoggedIn ? (
-            <NavDropdown title='Kirjautunut' id='user-firstname'>
+            <NavDropdown title={`${user.firstName}`} id='user-firstname'>
               <LinkContainer to='/user'>
                 <NavDropdown.Item>Account</NavDropdown.Item>
               </LinkContainer>
