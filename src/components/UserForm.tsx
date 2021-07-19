@@ -141,7 +141,6 @@ const UserForm = () => {
                 value={formData.confirmPassword}
                 onChange={handleChange}
               ></Form.Control>
-              <small className="for-example">You can change your password.</small>
             </Form.Group>
           </>
         )}

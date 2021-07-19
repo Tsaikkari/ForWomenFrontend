@@ -1,3 +1,6 @@
+/* TODO: Change colors and check responsiveness */
+/* maybe switch to scss and create separate files for each component*/
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -17,6 +20,26 @@ main {
 .form-row > .col {
   padding-right: 0;
   padding-left: 0;
+}
+
+/* Navbar */
+.navbar-nav,
+.mr-auto {
+  flex: 1;
+  margin: auto !important;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 4.5rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(78, 55, 55) !important;
+}
+.logo {
+  color: #4e5180 !important;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-right: 5rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 /*--------------------HOMEPAGE 1224PX ---> ---------------------------*/
@@ -70,8 +93,6 @@ th {
 }
 
 /*----------------------SERVICES PAGE 1224PX ---> ----------------------------------*/
-
-
 
 /*------------------------CONTACT PAGE 1224PX ---> ----------------------------------------*/
 
@@ -444,6 +465,27 @@ li:first-child::before {
   height: 9.4vh;
 }
 
+.account-link,
+.sub-link {
+  float: right;
+  font-size: 1.3rem;
+  color: #4e5180;
+  padding-left: 0.2rem;
+  padding-right: 2.5rem;
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+}
+
+.nav-tabs .nav-link.active {
+  color: #4e5180;
+  font-weight: 600;
+}
+
 .variation-col,
 .order-col {
   padding: 0;
@@ -581,7 +623,6 @@ li:first-child::before {
   margin-left: 2.2rem;
 }
 
-
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 %%%%%%%%%%%%%%%%%      M O B I L E  --> 633 %%%%%%%%%%%%%%%%%
@@ -603,7 +644,6 @@ li:first-child::before {
 
   /* --------------------HOMEPAGE-----------*/
 
-
   /*------------------ABOUT PAGE---------------------*/
 
   .dots {
@@ -611,7 +651,6 @@ li:first-child::before {
   }
 
   /* ------------------SERVICES PAGE -------------------------*/
-
 
   /*-----------------------CONTACT PAGE ---------------------*/
 
@@ -659,7 +698,7 @@ li:first-child::before {
     padding-bottom: 2rem;
     font-family: 'Poppins', sans-serif;
   }
-  
+
   .login-button {
     margin-top: 0.6rem;
     margin-bottom: 1rem;
@@ -799,7 +838,6 @@ li:first-child::before {
     color: #fff !important;
   }
 }
-  
 
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 &&&&&&&&&&&&&&&&&&&&& smaller &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -841,12 +879,9 @@ li:first-child::before {
 
   /* -------------------HOMEPAGE 320-480 ---------------------------------------*/
 
-
   /*------------------ABOUT PAGE 320-480 ---------------------*/
 
-
   /* ------------------SERVICES PAGE 320-480 -------------------------*/
-
 
   /*-----------------------CONTACT PAGE 320-480 ---------------------*/
 
@@ -972,4 +1007,3 @@ li:first-child::before {
     width: 100%;
   }
 }
-
