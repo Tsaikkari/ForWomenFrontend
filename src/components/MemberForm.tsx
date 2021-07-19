@@ -218,7 +218,7 @@ const MemberForm = () => {
                 className='save send-member-email-button'
                 type='button'
               >
-                2. Send confirmation email
+                2. Notify member
               </Button>
             </Col>
           )}
@@ -230,10 +230,10 @@ const MemberForm = () => {
             </p>
             <Button
               type='button'
-              className='tallenna'
+              className='save send-customer-email-button'
               onClick={emailAndToOrderInfo}
             >
-              Finished
+              I have added all members
             </Button>
           </>
         )}
