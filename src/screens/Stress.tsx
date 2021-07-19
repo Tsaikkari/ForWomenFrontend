@@ -4,6 +4,7 @@ const Stress = () => {
   return (
     <>
       <SubNavBar />
+      Goodness, care, compassion
     </>
   )
 }

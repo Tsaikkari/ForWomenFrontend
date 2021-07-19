@@ -1,6 +1,7 @@
 import { Row, Col } from 'react-bootstrap'
 
-const StepsHeader = ({ step1, step2, step3, step4, step5 }: any) => {
+const StepsHeader = ({ step1, step2, step3 }: any) => {
+  // TODO: separate steps for shipping and payment
   return (
     <>
       <Row>
@@ -10,26 +11,15 @@ const StepsHeader = ({ step1, step2, step3, step4, step5 }: any) => {
               {step1 ? (
                 <li className='step active'>
                   <i className='icon-in-circle active fas fa-shopping-cart'></i>
-                  Service
+                  Shopping cart
                 </li>
               ) : (
                 <li className='step'>
                   <i className='icon-in-circle fas fa-shopping-cart'></i>
-                  Service
+                  Shopping cart
                 </li>
               )}
               {step2 ? (
-                <li className='step active'>
-                  <i className='icon-in-circle fas fa-user-circle'></i>
-                  Order and Login
-                </li>
-              ) : (
-                <li className='step'>
-                  <i className='icon-in-circle fas fa-user-circle'></i>
-                  Order and Login
-                </li>
-              )}
-              {step3 ? (
                 <li className='step active'>
                   <i className='icon-in-circle active fas fa-truck'></i>
                   Contact and Shipping
@@ -40,7 +30,7 @@ const StepsHeader = ({ step1, step2, step3, step4, step5 }: any) => {
                   Contact and Shipping
                 </li>
               )}
-              {step4 ? (
+              {step3 ? (
                 <li className='step active'>
                   <i className='icon-in-circle far fa-credit-card active'></i>
                   Summary, Payment
@@ -49,17 +39,6 @@ const StepsHeader = ({ step1, step2, step3, step4, step5 }: any) => {
                 <li className='step'>
                   <i className='icon-in-circle far fa-credit-card'></i>
                   Summary, Payment
-                </li>
-              )}
-              {step5 ? (
-                <li className='step active'>
-                  <i className='icon-in-circle fas fa-address-card active'></i>
-                  Create Account
-                </li>
-              ) : (
-                <li className='step'>
-                  <i className='icon-in-circle fas fa-address-card'></i>
-                  Create Account
                 </li>
               )}
             </ul>

@@ -295,7 +295,6 @@ li:first-child::before {
   margin-bottom: 1rem;
   border-radius: 2px;
   padding: 1.5rem;
-  background: #e9ebed;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -759,7 +758,6 @@ li:first-child::before {
     border-radius: 7px;
     box-shadow: 0 2px 5px #ccc;
     padding: 1.5rem;
-    background: #e9ebed;
     border-radius: 0 !important;
     font-family: 'Poppins', sans-serif;
     margin: 0 auto 2rem auto;

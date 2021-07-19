@@ -10,14 +10,14 @@ const Links = () => {
           <LinkContainer to="/">
             <Nav.Link className="page-links">Home</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="/about">
-            <Nav.Link className="page-links">About</Nav.Link>
-          </LinkContainer>
           <LinkContainer to="/services">
             <Nav.Link className="page-links">Services</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/contact">
             <Nav.Link className="page-links">Contact</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/register">
+            <Nav.Link className="page-links">Sign Up</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/login">
             <Nav.Link className="page-links">Login</Nav.Link>

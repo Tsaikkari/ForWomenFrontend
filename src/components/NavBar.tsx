@@ -29,14 +29,14 @@ const NavBar = () => {
       <Navbar.Toggle aria-controls='responsive-navbar-nav' className='hamburger' />
       <Navbar.Collapse id='responsive-navbar-nav'>
         <Nav className='mr-auto'>
-          <LinkContainer to='/about'>
-            <Nav.Link>About</Nav.Link>
-          </LinkContainer>
           <LinkContainer to='/services'>
             <Nav.Link>Services</Nav.Link>
           </LinkContainer>
           <LinkContainer to='/contact'>
             <Nav.Link>Contact</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to='/register'>
+            <Nav.Link>Sign Up</Nav.Link>
           </LinkContainer>
           {user.isLoggedIn ? (
             <NavDropdown title={`${user.firstName}`} id='user-firstname'>

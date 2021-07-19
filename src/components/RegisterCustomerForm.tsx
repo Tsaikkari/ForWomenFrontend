@@ -59,7 +59,7 @@ const RegisterCustomerForm = () => {
       {error && <Message variant='danger'>{error}</Message>}
       {!error && message && <Message className='message' variant='success'>{message}</Message>}
       <Form onSubmit={submitHandler} className='register-form'>
-        <h1 className='register-header mb-4 text-center'>Luo tili</h1>
+        <h1 className='register-header mb-4 text-center'>Sign Up</h1>
         <Form.Group controlId='username-register'>
           <Form.Label>Email</Form.Label>
           <Form.Control

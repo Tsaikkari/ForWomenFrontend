@@ -1,7 +1,6 @@
 import { Switch, Route } from 'react-router-dom'
 
 import Home from './screens/Home'
-import About from './screens/About'
 import Services from './screens/Services'
 import Login from './screens/Login'
 import UserPage from './screens/UserPage'
@@ -23,7 +22,6 @@ const Routes = () => (
   <Switch>
     <main>
       <Route path='/' component={Home} exact />
-      <Route path='/about' component={About} exact />
       <Route path='/services' component={Services} exact />
       <Route path='/login' component={Login} />
       <Route path='/user' component={UserPage} />
