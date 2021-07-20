@@ -68,7 +68,7 @@ const PlaceOrder = () => {
                 <h2 className='placeorder-headers'>Shipping Address</h2>
                 <p className='placeorder-texts'>
                   Address: {' '}
-                  {cart.address}, {cart.postalCode}, {cart.city}
+                  {cart.address}, {cart.postalCode}, {cart.city}, {cart.country}
                 </p>
               </ListGroup.Item>
 
@@ -81,7 +81,7 @@ const PlaceOrder = () => {
               </ListGroup.Item>
 
               <ListGroup.Item>
-                <h2 className='placeorder-headers'>Palvelu</h2>
+                <h2 className='placeorder-headers'>Service</h2>
                 {cart.inCart.length === 0 ? (
                   <Message>Your shopping cart is empty</Message>
                 ) : (

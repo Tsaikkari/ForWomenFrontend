@@ -20,14 +20,13 @@ const Users = () => {
     // } else {
     //   history.push('/login')
     // }
-    return () => { }
+    return () => {}
   }, [dispatch])
 
   const users = useSelector((state: AppState) => state.users)
   const { loading, error, list } = users
 
   const deleteHandler = (id: any) => {
-    console.log('id', id)
     if (window.confirm('Are you sure you want to delete the user?')) {
       dispatch(deleteUserRequest(id))
     }
@@ -35,7 +34,12 @@ const Users = () => {
 
   return (
     <>
-      <h1 className='my-3 ml-3' style={{ color: '#4e5180', fontFamily: 'Poppins, sanf-serif' }}>Users</h1>
+      <h1
+        className='my-3 ml-3'
+        style={{ color: '#4e5180', fontFamily: 'Poppins, sanf-serif' }}
+      >
+        Users
+      </h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -45,7 +49,7 @@ const Users = () => {
           <thead className='user-title'>
             <tr className='user'>
               <th className='text-center'>ID</th>
-              <th className='text-center'>R-ID</th>
+              <th className='text-center'>G-ID</th>
               <th className='text-center'>ROLE</th>
               <th className='text-center'>FIRSTNAME</th>
               <th className='text-center'>LASTNAME</th>
@@ -59,8 +63,7 @@ const Users = () => {
             {list.map((user: any) => (
               <tr key={user.id}>
                 <td>{user.id}</td>
-                {user.group &&
-                  <td>{user.group.id}</td>}
+                {user.group && <td>{user.group.id}</td>}
                 <td>{user.role}</td>
                 <td>{user.firstName}</td>
                 <td>{user.lastName}</td>
@@ -71,7 +74,10 @@ const Users = () => {
                 </td>
                 <td>
                   {user.isAdmin ? (
-                    <i className='fas fa-check' style={{ color: '#4e5180' }}></i>
+                    <i
+                      className='fas fa-check'
+                      style={{ color: '#4e5180' }}
+                    ></i>
                   ) : (
                     <i className='fas fa-times' style={{ color: 'red' }}></i>
                   )}
@@ -82,7 +88,11 @@ const Users = () => {
                       <i className='fas fa-edit' style={{ color: '#fff' }}></i>
                     </Button>
                   </LinkContainer>
-                  <Button variant='danger' className='btn-sm' onClick={() => deleteHandler(user.id)}>
+                  <Button
+                    variant='danger'
+                    className='btn-sm'
+                    onClick={() => deleteHandler(user.id)}
+                  >
                     <i className='fas fa-trash'></i>
                   </Button>
                 </td>

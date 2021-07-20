@@ -11,13 +11,13 @@ import { AppState } from '../redux/types'
 
 const PaymentMethod = () => {
   const cart = useSelector((state: AppState) => state.cart)
-  const { address, postalCode, city } = cart
+  const { address, postalCode, city, country } = cart
   const [paymentMethod, setPaymentMethod] = useState('')
 
   const history = useHistory()
   const dispatch = useDispatch()
 
-  if (!address || !postalCode || !city) {
+  if (!address || !postalCode || !city || !country) {
     history.push('/shipping')
   }
 
@@ -40,7 +40,7 @@ const PaymentMethod = () => {
         <h1 className='paymentmethod-header'>Choose Payment Method</h1>
         <Form className='paymentmethod-form' onSubmit={submitHandler}>
           <Form.Group>
-            {/* <Form.Label as='legend'>Valitse maksutapa</Form.Label> */}
+            {/* <Form.Label as='legend'>Choose Your Payment Method</Form.Label> */}
             <Col className='paymentmethod-col'>
               <Form.Check
                 className='radio-button'

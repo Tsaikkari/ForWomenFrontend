@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
 import LoginForm from '../components/LoginForm'
-import StepsHeader from '../components/StepsHeader'
 import { loginUserRequest } from '../redux/actions/user'
 import { AppState } from '../redux/types'
 
@@ -28,33 +27,16 @@ const Login = () => {
 
   return (
     <>
-      {/* TODO: fix */}
-      {selectedServices.length !== 0 ? (
-        <>
-          <StepsHeader step1 step2 user={2} payment={1} account={1} />
-          <LoginForm
-            submitHandler={submitHandler}
-            error={error}
-            email={email}
-            setEmail={setEmail}
-            password={password}
-            setPassword={setPassword}
-            loading={loading}
-            id={id}
-          />
-        </>
-      ) : (
-        <LoginForm
-          submitHandler={submitHandler}
-          error={error}
-          email={email}
-          setEmail={setEmail}
-          password={password}
-          setPassword={setPassword}
-          loading={loading}
-          id={id}
-        />
-      )}
+      <LoginForm
+        submitHandler={submitHandler}
+        error={error}
+        email={email}
+        setEmail={setEmail}
+        password={password}
+        setPassword={setPassword}
+        loading={loading}
+        id={id}
+      />
     </>
   )
 }

@@ -17,7 +17,7 @@ const MemberForm = () => {
   const user = useSelector((state: AppState) => state.user)
   const members = useSelector((state: AppState) => state.user.group?.members)
   const { error, loading, role } = user
-  const [qty, setQty] = useState(5)
+  const [qty, setQty] = useState(7)
   const [message, setMessage] = useState('')
   const [firstPassword, setFirstPassword] = useState('')
   const [formData, setFormData] = useState({
@@ -55,8 +55,8 @@ const MemberForm = () => {
 
     if (
       firstPassword &&
-      user.group.members?.length < 7 &&
-      qty <= 5 &&
+      user.group.members?.length < 8 &&
+      qty <= 7 &&
       qty >= 1
     ) {
       dispatch(
@@ -72,12 +72,12 @@ const MemberForm = () => {
       )
       setQty(qty - 1)
 
-      if (user.group.members.length === 6) {
+      if (user.group.members.length === 8) {
         setMessage(
           'Your group is full. The group members will receive an email and they can sign in to their accounts.'
         )
       }
-      if (user.group.members.length !== 7 && qty >= 2) {
+      if (user.group.members.length !== 8 && qty >= 2) {
         setMessage(
           `Member is saved. You can still add ${qty - 1
           } members.`
@@ -104,7 +104,7 @@ const MemberForm = () => {
   }
 
   const handleEmail = () => {
-    if (members && members.length <= 7) {
+    if (members && members.length <= 8) {
       dispatch(sendEmailMemberRequest(formData.email, formData.firstName))
       setFormData({
         email: '',
@@ -220,7 +220,7 @@ const MemberForm = () => {
             >
               I have now added all members
             </Button>
-            <small>! You can add more members later (max total 5)</small>
+            <small>! You can add more members later (max total 7)</small>
           </>
         )}
       </Form>

@@ -74,11 +74,7 @@ function* loginUserSaga(action: LoginUserRequestAction) {
       yield put(loginUserSuccess(res.data.payload))
       yield LocalStorage.saveToken(res.data.payload.token)
       yield put(setLoggedIn())
-      if (res.data.payload.mobileNumber === null) {
-        history.push('/shipping')
-      } else {
-        history.push('/user')
-      }
+      history.push('/user')
     }
   } catch (error) {
     yield put(loginUserFail(error))

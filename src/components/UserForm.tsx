@@ -85,7 +85,6 @@ const UserForm = () => {
         })
       )
       setMessage('Successfully saved contact info. Add members next.')
-      console.log('message', message)
     }
   }
 

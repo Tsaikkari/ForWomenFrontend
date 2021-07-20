@@ -31,7 +31,7 @@ const ShippingScreen = () => {
       }
     })
 
-    if (value === 'lahja') {
+    if (value === 'freetier') {
       setIsFree(true)
       document.querySelector('#contact-info')?.classList.add('invisible')
     }
