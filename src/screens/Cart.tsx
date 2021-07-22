@@ -14,7 +14,7 @@ const Cart = ({ history }: any) => {
 
   const submitHandler = () => {
     console.log('selectedServices', selectedServices)
-    history.push('/register')
+    history.push('/shipping')
   }
 
   // back button
@@ -55,7 +55,7 @@ const Cart = ({ history }: any) => {
                   <h2>
                     {selectedServices.map((s: any) =>
                       s.price.toFixed(2)
-                    )} € / 3 kk
+                    )} € / 1 kk
                   </h2>
                 </ListGroup.Item>
                 <ListGroup.Item>

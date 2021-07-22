@@ -41,7 +41,6 @@ export const initState: AppState = {
         name: '',
         description: '',
         price: 0,
-        image: '',
       },
     ],
     loading: false,

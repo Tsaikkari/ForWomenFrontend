@@ -54,7 +54,7 @@ const ServiceForm = () => {
           <Form.Control as='textarea' rows={3}
             type='text'
             placeholder='Description'
-            name='descriptionFirst'
+            name='description'
             value={formData.description}
             onChange={handleChange}
           ></Form.Control>

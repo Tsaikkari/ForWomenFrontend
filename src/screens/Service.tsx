@@ -28,7 +28,7 @@ const Service = () => {
   }
   return (
     <ServiceContext.Provider value={{ service }}>
-      <Link className='btn btn-light my-3' to='/cakes'>
+      <Link className='btn btn-light my-3' to='/services'>
         Go Back
       </Link>
       {loading ? (
@@ -47,7 +47,7 @@ const Service = () => {
           </Col>
           <Col md={5}>
             <ListGroup variant='flush'>
-              <ListGroup.Item className='cakeinfo'>
+              <ListGroup.Item className='service-info'>
                 <h3>{service.name}</h3>
               </ListGroup.Item>
               <ListGroup.Item>Price: EUR {service.price}</ListGroup.Item>
