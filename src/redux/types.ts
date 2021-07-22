@@ -349,11 +349,8 @@ export type UserActions =
   | SendContactMailFailAction
 
 // Services
-export type Service = {
+export type Service = ServiceItem & {
   id: number
-  name: string
-  description: string
-  price: number
 }
 
 export type ServiceItem = {

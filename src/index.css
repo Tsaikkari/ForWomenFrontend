@@ -329,6 +329,13 @@ li:first-child::before {
   font-weight: 600;
 }
 
+.price-sum-col {
+  margin-top: 6.75rem;
+  padding-right: 4.5rem;
+  padding-left: 0;
+  margin-left: 0;
+}
+
 /*--------------------SHOPPINGCART 1224 ---------------*/
 
 .shopping-header,
@@ -420,7 +427,7 @@ li:first-child::before {
 }
 
 .order-summary-col {
-  margin-top: 11.1rem;
+  margin-top: 1.9rem;
   font-family: 'Poppins', sans-serif;
 }
 

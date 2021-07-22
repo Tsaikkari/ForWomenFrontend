@@ -1,6 +1,6 @@
 import { Row, Col } from 'react-bootstrap'
 
-const StepsHeader = ({ step1, step2, step3 }: any) => {
+const StepsHeader = ({ step1, step2, step3, step4 }: any) => {
   // TODO: separate steps for shipping and payment
   return (
     <>
@@ -22,23 +22,34 @@ const StepsHeader = ({ step1, step2, step3 }: any) => {
               {step2 ? (
                 <li className='step active'>
                   <i className='icon-in-circle active fas fa-truck'></i>
-                  Contact and Shipping
+                  Shipping address
                 </li>
               ) : (
                 <li className='step'>
                   <i className='icon-in-circle fas fa-truck'></i>
-                  Contact and Shipping
+                  Shipping address
                 </li>
               )}
               {step3 ? (
                 <li className='step active'>
                   <i className='icon-in-circle far fa-credit-card active'></i>
-                  Summary, Payment
+                  Payment method
                 </li>
               ) : (
                 <li className='step'>
                   <i className='icon-in-circle far fa-credit-card'></i>
-                  Summary, Payment
+                  Payment method
+                </li>
+              )}
+              {step4 ? (
+                <li className='step active'>
+                  <i className='icon-in-circle fas fa-arrow-circle-right'></i>
+                  Summary
+                </li>
+              ) : (
+                <li className='step'>
+                  <i className='icon-in-circle fas fa-arrow-circle-right'></i>
+                  Summary
                 </li>
               )}
             </ul>

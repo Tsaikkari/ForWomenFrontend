@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Container, Row } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 import Loader from '../components/Loader'
 import Message from '../components/Message'
@@ -28,17 +28,17 @@ const Services = () => {
         ) : error ? (
           <Message variant='danger'>{error}</Message>
         ) : (
-          <>
+          <Row>
             {services &&
               services.map((service: any, index) => (
                 <>
-                  <Row className='product-row'>
-                    <Service key={index} service={service} />
-                  </Row>
+                  <Col key={service.id} sm={12} md={6} lg={4} xl={3} className='product-col'>
+                    <Service service={service} />
+                  </Col>
                   <hr></hr>
                 </>
               ))}
-          </>
+          </Row>
         )}
       </Container>
     </>

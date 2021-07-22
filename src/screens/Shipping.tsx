@@ -53,7 +53,7 @@ const ShippingScreen = () => {
 
   return (
     <>
-      <StepsHeader step1 step2 step3 user={2} payment={1} account={1} />
+      <StepsHeader step1 step2 />
       <FormContainer>
         <h1 className='shipping-header'>Contact Information</h1>
         <Form className='shipping-form' onSubmit={submitHandler}>

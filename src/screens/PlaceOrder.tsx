@@ -22,17 +22,19 @@ const PlaceOrder = () => {
   // }, [history, success])
 
   const placeOrderHandler = () => {
-    dispatch(createOrderRequest({
-      address: cart.address,
-      postalCode: cart.postalCode,
-      city: cart.city,
-      country: cart.country,
-      paymentMethod: cart.paymentMethod,
-      price: cart.price,
-      shippingPrice: cart.shippingPrice,
-      taxPrice: cart.taxPrice,
-      totalPrice: cart.totalPrice,
-    }))
+    dispatch(
+      createOrderRequest({
+        address: cart.address,
+        postalCode: cart.postalCode,
+        city: cart.city,
+        country: cart.country,
+        paymentMethod: cart.paymentMethod,
+        price: cart.price,
+        shippingPrice: cart.shippingPrice,
+        taxPrice: cart.taxPrice,
+        totalPrice: cart.totalPrice,
+      })
+    )
   }
 
   // back button
@@ -40,25 +42,18 @@ const PlaceOrder = () => {
     history.push(`/paymentmethod`)
   }
 
-  // const addDecimals = (num: number) => {
-  //   return (Math.round(num * 100) / 100).toFixed(2)
-  // }
-
   //@ts-ignore
-  cart.price =
-    cart.inCart.reduce((acc: number, item: any) => acc + item.price, 0
-    )
+  cart.price = cart.inCart.reduce(
+    (acc: number, item: any) => acc + item.price,
+    0
+  )
   //@ts-ignore
   cart.shippingPrice = cart.price > 200 ? 0 : 20
-  // cart.taxPrice = addDecimals(Number((0.15 * cart.price).toFixed(2)))
-  //@ts-ignore
-  cart.totalPrice =
-    Number(cart.price) + Number(cart.shippingPrice)
-
+  cart.totalPrice = Number(cart.price) + Number(cart.shippingPrice)
 
   return (
     <>
-      <StepsHeader step1 step2 step3 step4 user={2} payment={2} account={1} />
+      <StepsHeader step1 step2 step3 step4 />
       <h1 className='placeorder-header text-center'>Summary</h1>
       <Container>
         <Row>
@@ -67,16 +62,15 @@ const PlaceOrder = () => {
               <ListGroup.Item>
                 <h2 className='placeorder-headers'>Shipping Address</h2>
                 <p className='placeorder-texts'>
-                  Address: {' '}
-                  {cart.address}, {cart.postalCode}, {cart.city}, {cart.country}
+                  Address: {cart.address}, {cart.postalCode}, {cart.city},{' '}
+                  {cart.country}
                 </p>
               </ListGroup.Item>
 
               <ListGroup.Item>
                 <h2 className='placeorder-headers'>Payment</h2>
                 <p className='placeorder-texts'>
-                  Payment Method: {' '}
-                  {cart.paymentMethod}
+                  Payment Method: {cart.paymentMethod}
                 </p>
               </ListGroup.Item>
 
@@ -89,10 +83,14 @@ const PlaceOrder = () => {
                     {cart.inCart.map((item: any, index) => (
                       <ListGroup.Item key={index} className='selected-item'>
                         <Col md={6}>
-                          <p className='placeorder-texts selected-product'>{item.name}</p>
+                          <p className='placeorder-texts selected-product'>
+                            {item.name}
+                          </p>
                         </Col>
                         <Col md={6}>
-                          <p className='placeorder-texts selected-product'>{item.price} €</p>
+                          <p className='placeorder-texts selected-product'>
+                            {item.price} €
+                          </p>
                         </Col>
                       </ListGroup.Item>
                     ))}
@@ -107,7 +105,6 @@ const PlaceOrder = () => {
                 BACK
               </Button>
             </ListGroup>
-
           </Col>
           <Col md={4} className='order-summary-col'>
             <Card>
@@ -124,7 +121,9 @@ const PlaceOrder = () => {
                 <ListGroup.Item>
                   <Row>
                     <Col className='placeorder-texts'>Shipping Price</Col>
-                    <Col className='placeorder-texts'>{cart.shippingPrice} €</Col>
+                    <Col className='placeorder-texts'>
+                      {cart.shippingPrice} €
+                    </Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
@@ -135,8 +134,12 @@ const PlaceOrder = () => {
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col className='placeorder-texts'><strong>Total Price</strong></Col>
-                    <Col className='placeorder-texts'><strong>{cart.totalPrice} €</strong></Col>
+                    <Col className='placeorder-texts'>
+                      <strong>Total Price</strong>
+                    </Col>
+                    <Col className='placeorder-texts'>
+                      <strong>{cart.totalPrice} €</strong>
+                    </Col>
                   </Row>
                 </ListGroup.Item>
                 {/* <ListGroup.Item>

@@ -30,12 +30,12 @@ const PaymentMethod = () => {
     e.preventDefault()
 
     dispatch(savePaymentMethod(paymentMethod))
-    history.push('/summary')
+    history.push('/placeorder')
   }
 
   return (
     <>
-      <StepsHeader step1 step2 step3 step4 user={2} payment={1} account={1} />
+      <StepsHeader step1 step2 step3 />
       <FormContainer>
         <h1 className='paymentmethod-header'>Choose Payment Method</h1>
         <Form className='paymentmethod-form' onSubmit={submitHandler}>

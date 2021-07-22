@@ -16,7 +16,6 @@ export const initState: AppState = {
     firstName: '',
     lastName: '',
     mobile: '',
-    image: '',
     isAdmin: false,
     orders: [],
     group: {
@@ -42,6 +41,7 @@ export const initState: AppState = {
         name: '',
         description: '',
         price: 0,
+        image: '',
       },
     ],
     loading: false,
