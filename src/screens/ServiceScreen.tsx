@@ -15,10 +15,14 @@ interface RouteParams {
 
 const ServiceScreen = () => {
   const { id } = useParams<RouteParams>()
-  const allServices = useSelector((state: AppState) => state.services)
-  const { loading, error, list } = allServices
-  const service = list.find((s: any) => s.id === id)
-
+  const resources = useSelector((state: AppState) => state.resources)
+  const { loading, error, services } = resources
+  console.log('params', id) // ok
+  const mapping = services.map((s: any) => s.id)
+  console.log('mappingId', mapping) // ok
+  const service = services.find((s: any) => s.id === id)
+  console.log('service', service) // TODO: fix: why is this undefined?
+  
   const history = useHistory()
   const dispatch = useDispatch()
 

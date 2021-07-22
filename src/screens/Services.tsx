@@ -17,7 +17,7 @@ const Services = () => {
   }, [dispatch])
 
   const resources = useSelector((state: AppState) => state.resources)
-  const { services, loading, error } = resources
+  const { services, loading, error  } = resources
 
   return (
     <>

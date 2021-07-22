@@ -14,7 +14,6 @@ const Login = () => {
   const history = useHistory()
 
   const user = useSelector((state: AppState) => state.user)
-  const selectedServices = useSelector((state: AppState) => state.cart.inCart)
   const { loading, error, id } = user
 
   const submitHandler = (e: React.FormEvent) => {

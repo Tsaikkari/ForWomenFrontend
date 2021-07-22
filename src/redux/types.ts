@@ -350,7 +350,7 @@ export type UserActions =
 
 // Services
 export type Service = ServiceItem & {
-  id: number
+  id: number 
 }
 
 export type ServiceItem = {
@@ -517,7 +517,7 @@ export type ServicesState = {
 }
 
 export type Resources = {
-  services?: Service[]
+  services: any[] 
   loading: boolean
   error: any
 }
