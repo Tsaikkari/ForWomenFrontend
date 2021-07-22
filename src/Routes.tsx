@@ -7,6 +7,7 @@ import UserPage from './screens/UserPage'
 import Cart from './screens/Cart'
 import Contact from './screens/Contact'
 import ServiceForm from './components/ServiceForm'
+import ServiceScreen from './screens/ServiceScreen'
 import Register from './screens/Register'
 import UpdatePassword from './screens/UpdatePassword'
 import Users from './screens/Users'
@@ -23,6 +24,7 @@ const Routes = () => (
     <main>
       <Route path='/' component={Home} exact />
       <Route path='/services' component={Services} exact />
+      <Route path='/service/:id' component={ServiceScreen} />
       <Route path='/login' component={Login} />
       <Route path='/user' component={UserPage} />
       <Route path='/stress' component={Stress} />

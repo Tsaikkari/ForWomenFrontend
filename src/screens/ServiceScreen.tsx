@@ -13,7 +13,7 @@ interface RouteParams {
   id: string
 }
 
-const Service = () => {
+const ServiceScreen = () => {
   const { id } = useParams<RouteParams>()
   const allServices = useSelector((state: AppState) => state.services)
   const { loading, error, list } = allServices
@@ -24,7 +24,7 @@ const Service = () => {
 
   const addToShoppingcartHandler = () => {
     dispatch(addToShoppingcart(service))
-    history.push(`/shoppingcart/${id}`)
+    history.push(`/shoppingcart/`)
   }
   return (
     <ServiceContext.Provider value={{ service }}>
@@ -85,4 +85,4 @@ const Service = () => {
   )
 }
 
-export default Service
+export default ServiceScreen
