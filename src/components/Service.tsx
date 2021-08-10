@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap'
 
 const Service = ({ service }: any) => {
+  console.log('service', service)
   return (
     <Card className="my-3 p-3 rounded">
       <Link to={`/service/${service.id}`}>
@@ -14,7 +15,9 @@ const Service = ({ service }: any) => {
             <strong>{service.name}</strong>
           </Card.Title>
         </Link>
-
+        <Card.Text as="h3">
+          {service.description}
+        </Card.Text>
         <Card.Text as="h3">
           EUR {service.price}
         </Card.Text>

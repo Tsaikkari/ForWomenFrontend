@@ -1,4 +1,4 @@
-import { useParams, Link, useHistory } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 
@@ -13,18 +13,12 @@ interface RouteParams {
   id: string
 }
 
-const ServiceScreen = () => {
+const ServiceScreen = ({ history }: any) => {
   const { id } = useParams<RouteParams>()
+  const dispatch = useDispatch()
   const resources = useSelector((state: AppState) => state.resources)
   const { loading, error, services } = resources
-  console.log('params', id) // ok
-  const mapping = services.map((s: any) => s.id)
-  console.log('mappingId', mapping) // ok
-  const service = services.find((s: any) => s.id === id)
-  console.log('service', service) // TODO: fix: why is this undefined?
-  
-  const history = useHistory()
-  const dispatch = useDispatch()
+  const service = services.find((s: any) => s.id === Number(id))
 
   const addToShoppingcartHandler = () => {
     dispatch(addToShoppingcart(service))
